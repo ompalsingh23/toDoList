@@ -1,4 +1,4 @@
-//jshint esversion:6
+
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -6,7 +6,7 @@ const mongoose= require('mongoose');
 const app = express();
 const _=require('lodash');
 
-mongoose.connect("mongodb+srv://admin-ompal:Test123@cluster0.jbxea.mongodb.net/todolistDB", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://ompal:Ompal@12345@cluster0.fybqn.mongodb.net/todolistDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.set('view engine', 'ejs');
 
@@ -40,7 +40,6 @@ const itemsSchema = ({
 });
 
 const Items = new mongoose.model("Items", itemsSchema);
-
 
 
 app.get("/", function(req, res) {
